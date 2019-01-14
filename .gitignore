@@ -1,0 +1,6 @@
+/node_modules
+/WEB-INF
+/dist
+/resources
+/_app
+package-lock.json

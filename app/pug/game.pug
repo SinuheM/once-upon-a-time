@@ -1,0 +1,38 @@
+section#game
+	a.backHome.back(href="#")
+		img.reflect-y(src="assets/images/arrow.svg", alt="backHome")
+		span Regresar al inicio
+	.game
+		.turn
+			span#info Es el turno del 
+			img#turn-image(src="assets/images/pig.png", alt="Pig turn")
+		#tictac.no-win
+			//- .row
+				.box
+					img(src="assets/images/pig.png", alt="Pig turn")
+				.box
+					img(src="assets/images/wolf.png", alt="Wolf turn")
+				.box
+					img(src="", alt="")
+		#game-win.modal
+			.modal-close
+				i.btn.btn-secondary(href="#") x
+			p El ganador es:
+			img#imgwinner(src="assets/images/pig.png", alt="Winner")
+			a.refreshGame.btn.btn-primary(href="#")
+				img(src="assets/images/audio-button.svg#reload", alt="Refresh game")
+				| Reiniciar partida
+	.game-options
+		h3 Puntuación
+		.points
+			.point
+				img(src="assets/images/pig.png", alt="Pig turn")
+				h4#pigPoint 0
+			.point
+				img(src="assets/images/wolf.png", alt="Pig turn")
+				h4#wolfPoint 0
+			hr
+			a.refreshGame.btn.btn-primary.btn-outline(href="#")
+				| Reiniciar partida
+			a.resetGame.btn.btn-danger.btn-outline(href="#")
+				| Reiniciar puntuación

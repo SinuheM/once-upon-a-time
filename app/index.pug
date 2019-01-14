@@ -1,0 +1,34 @@
+doctype html
+html(lang='es')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		// Tell the browser to be responsive to screen width
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='description', content='Cuentos para niños')
+		meta(name='author', content='Adrian Priale')
+		// Favicon icon
+		link(rel='shortcut icon', type='image/x-icon', sizes='16x16', href='assets/images/favicon.ico')
+		title Los tres chanchitos		
+		// Custom CSS
+		link(href='css/style.css', rel='stylesheet')
+		// HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		// WARNING: Respond.js doesn't work if you view the page via file://
+		//[if lt IE 9]
+			script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+			script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+			[endif]
+	body		
+		//- Main wrapper
+		.wrapper
+			include pug/home.pug
+			include pug/story.pug
+			include pug/game.pug
+		//- Scripts
+		// build:js js/main.js
+		script(type="text/javascript", src="js/story.js")
+		script(type="text/javascript", src="js/game.js")
+		script(type="text/javascript", src="js/story-view.js")
+		script(type="text/javascript", src="js/game-view.js")
+		script(type="text/javascript", src="js/custom.js")
+		// endbuild

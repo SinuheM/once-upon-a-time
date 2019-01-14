@@ -1,0 +1,64 @@
+{  
+   "data":[  
+      	{  
+	        "id":1,
+            "text":"Érase una vez tres cerditos que habían crecido alegres en una cabaña del bosque. <br> Y como ya eran mayores, sus papás decidieron que era hora de que construyeran cada uno su propia casa. <br> Los tres cerditos se despidieron de sus papás y fueron a ver cómo era el mundo.",
+            "image":"assets/images/los-tres-cerditos-capitulo-1.jpg",
+            "time_end": 24
+      	},
+        {  
+            "id":2,
+            "text":"El primer cerdito, el perezoso de la familia, decidió hacer una casa de paja. <br> En un minuto la choza ya estaba hecha y entonces se fue a dormir.",
+            "image":"assets/images/los-tres-cerditos-capitulo-2.jpg",
+            "time_end": 34
+        },
+        {  
+            "id":3,
+            "text":"El segundo cerdito, un glotón, prefirió hacer la cabaña de madera. <br> No tardó mucho en construirla y luego se fue a comer manzanas.",
+            "image":"assets/images/los-tres-cerditos-capitulo-3.jpg",
+            "time_end": 45
+        },
+        {  
+	        "id":4,
+            "text":"El tercer cerdito, muy trabajador, optó por construirse una casa de ladrillos y cemento. Tardaría más en construirla pero estaría más protegido. <br> Después de un día de mucho trabajo la casa quedó preciosa.",
+            "image":"assets/images/los-tres-cerditos-capitulo-4.jpg",
+            "time_end": 61
+      	},
+        {  
+            "id":5,
+            "text":"Pero ya se empezaban a oír los aullidos del lobo en el bosque. Éste no tardó mucho en acercarse a las casas de los tres cerditos. <br> Hambriento, el lobo se dirigió a la primera casa y dijo: – Ábreme la puerta. – Ábreme la puerta o soplaré y soplaré y tu casa derribaré. <br> Como el cerdito no la abrió, el lobo sopló con fuerza y derrumbó la casa de paja.",
+            "image":"assets/images/los-tres-cerditos-capitulo-5.jpg",
+            "time_end": 87
+        },
+        {  
+            "id":6,
+            "text":"El cerdito temblando de miedo salió corriendo y entró en la casa de madera de su hermano. <br> El lobo le siguió y delante de la segunda casa llamó a la puerta y dijo: – Ábreme la puerta. – Ábreme la puerta o soplaré y soplaré y tu casa derribaré. <br> Pero el segundo cerdito no la abrió. Y el lobo sopló y sopló…y la cabaña se fue por los aires.",
+            "image":"assets/images/los-tres-cerditos-capitulo-6.jpg",
+            "time_end": 113
+        },
+        {  
+            "id":7,
+            "text":"Asustados, los dos cerditos corrieron y entraron en la casa de ladrillos de su otro hermano. <br> Pero como el lobo estaba decidido a comérselos llamó a la puerta y gritó: – Ábreme la puerta. – Ábreme la puerta o soplaré y soplaré y tu casa derribaré. <br> Y el cerdito trabajador le dijo: – Sopla lo que quieras, pero no la abriré. <br> Entonces el loblo sopló y sopló. Sopló con todas sus fuerzas, pero la casa ni se movió. La casa era muy fuerte y resistente.",
+            "image":"assets/images/los-tres-cerditos-capitulo-7.jpg",
+            "time_end": 146
+        },
+        {  
+            "id":8,
+            "text":"El lobo se quedó casi sin aire. Pero aunque el lobo estaba muy cansado, no desistía. Trajo una escalera. Subió al tejado de la casa y se deslizó por el pasaje de la chimenea. <br> Estaba empeñado en entrar en la casa y comerse a los tres cerditos como fuera.",
+            "image":"assets/images/los-tres-cerditos-capitulo-8.jpg",
+            "time_end": 167
+        },
+        {  
+            "id":9,
+            "text":"Pero lo que él no sabía es que los tres cerditos pusieron al final de la chimenea un caldero con agua hirviendo. <br> Y el lobo, al caerse por la chimenea, acabó quemándose con el agua caliente. <br> Dio un enorme grito y salió corriendo …y nunca más volvió.",
+            "image":"assets/images/los-tres-cerditos-capitulo-9.jpg",
+            "time_end": 182
+        },
+        {  
+            "id":10,
+            "text":"Así, los tres cerditos pudieron vivir tranquilamente. <br> Y tanto el perezoso como el glotón aprendieron que sólo con el trabajo se consiguen las cosas.",
+            "image":"assets/images/los-tres-cerditos-capitulo-10.jpg",
+            "time_end": 203
+        }
+   ]
+}

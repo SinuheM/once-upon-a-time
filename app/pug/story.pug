@@ -1,0 +1,24 @@
+section#story
+	a.backHome.back(href="#")
+		img.reflect-y(src="assets/images/arrow.svg", alt="backHome")
+		span Regresar al inicio
+	audio
+		source(src="assets/music/los-tres-cerditos.mp3", type="audio/mpeg", preload="auto")
+		| Your browser does not support the audio element.
+	ul.story
+		//- li.story-chapter
+			p.fade-in Érase una vez tres cerditos que habían crecido alegres en una cabaña del bosque. 
+				br 
+				| Y como ya eran mayores, sus papás decidieron que era hora de que construyeran cada uno su propia casa.
+				br
+				| Los tres cerditos se despidieron de sus papás y fueron a ver cómo era el mundo.
+			picture.story-img
+				img(src="assets/images/los-tres-cerditos-capitulo-1.jpg", alt="")
+	.story-nav
+		.story-music
+			span#play.pause
+			span#volume.volume
+		.story-position
+			span#chapter-prev <
+			.story-steps
+			span#chapter-next >

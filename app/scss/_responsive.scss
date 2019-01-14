@@ -1,0 +1,85 @@
+/*============================================================== 
+ For Laptop & above all (1650px) 
+ ============================================================== */
+
+@media(min-width:1650px) {
+    
+}
+
+/*============================================================== 
+ For Laptop & above all (1370px) 
+ ============================================================== */
+
+@media(max-width:1370px) {
+    
+}
+
+/*-- ============================================================== 
+ Small Desktop & above all (1200px) 
+ ============================================================== */
+
+ @media(max-width:1200px) {
+    .story{
+        p{
+            width: 400px;
+        }
+    }
+}
+
+
+/*-- ============================================================== 
+ Ipad & above all(769px) 
+ ============================================================== */
+
+@media(min-width:769px) {
+}
+
+
+/*-- ============================================================== 
+Phone and below (768px) 
+============================================================== */
+
+@media(max-width:768px) {
+    section{
+        &:not(.controls){
+            .back, .story-nav{
+                opacity: 1;
+            }
+        }
+    }
+    .story-nav{
+        padding: 0;
+        position: relative;
+        left: 0;
+        bottom: -20px;
+    }
+    .game{
+        margin-bottom: 50px;
+        max-width: 100%;
+        &:after{
+            display: none;
+        }
+    }
+    section{
+        padding: 70px 40px;
+    }
+    .back{
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 500px){
+    section{
+        padding: 50px 40px;
+    }
+    .back{
+        margin-left: 0;
+        margin-top: -20px;
+    }
+    .game{
+        padding: 0;
+        #game-win{
+            left: 0;
+        }
+    }
+}

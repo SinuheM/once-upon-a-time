@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a, 
+i, 
+span{
+    transition: all .5s;
+}
+hr{
+    margin: 2.5em 0;
+    opacity: .7;
+}
+/*******************
+Headings
+*******************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $primary;
+    font-weight: 400;
+}
+
+h1 {
+    line-height: 48px;
+    font-size: 36px
+}
+
+h2 {
+    line-height: 36px;
+    font-size: 24px
+}
+
+h3 {
+    line-height: 30px;
+    font-size: 21px
+}
+
+h4 {
+    line-height: 22px;
+    font-size: 18px
+}
+
+h5 {
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h6 {
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+}
+/*******************
+Buttons
+******************/
+.btn{
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 5px;
+    transition: all .5s;
+    color: #fff;
+}
+.btn-primary {
+    background-color: $primary;
+    &:hover{
+        background: $primary-dark;
+    }
+}
+.btn-secondary {
+    background-color: $secondary;    
+    &:hover{
+        background: $secondary-dark;
+    }
+}
+.btn-danger {
+    background-color: $danger;    
+    &:hover{
+        background: $danger-dark;
+    }
+}
+.btn-outline {    
+    background-color: transparent;    
+    &.btn-primary {
+        color: $primary;
+        border: 1px solid $primary;
+        &:hover,
+        &:focus,
+        &.focus {
+            background: $primary-dark;
+            color: $white;
+            border-color:$primary;
+        }
+    }
+    &.btn-secondary {
+        color: $secondary;
+        border: 1px solid $secondary;
+        &:hover,
+        &:focus,
+        &.focus {
+            background: $secondary-dark;
+            color: $white;
+            border-color:$secondary;
+        }
+    }
+    &.btn-danger {
+        color: $danger;
+        border: 1px solid $danger;
+        &:hover,
+        &:focus,
+        &.focus {
+            background: $danger-dark;
+            color: $white;
+            border-color:$danger;
+        }
+    }
+}
+.back{
+    margin-top: -50px;
+    margin-bottom: 50px;
+    margin-left: -50px;
+    display: block;
+    opacity: .85;
+    width: 24px;
+    overflow: hidden;
+    height: 24px;
+    transition: all .5s;
+    text-decoration: none;
+    text-align: left;
+    img{
+        vertical-align: middle;
+    }
+    span{
+        color: #fff;
+        font-family: sans-serif;       
+        margin-left: 10px;
+    }
+    &:hover{
+        opacity: 1;
+        width: 200px;
+    }
+}
+/*******************
+Container
+******************/
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    h1{
+        padding: 10px;
+        color: $primary;
+        text-align: center;        
+        animation-delay: .25s;        
+    }
+}
+section{
+    padding: 100px;
+    right: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    overflow: auto;
+    &.active{
+        display: block;
+    }
+    &:not(.controls){
+        .back, .story-nav{
+            transition: all 1s;
+            opacity: 0;
+        }
+    }
+}
+/*******************
+Rotation
+******************/
+.reflect-y{
+    transform: rotateY(180deg);
+}
+.reflect-x{
+    transform: rotateX(180deg);
+    &.reflect-y{
+        transform: rotatex(180deg) rotateY(180deg);
+    }
+}
+/*******************
+Modal
+******************/
+.modal{
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 60px;   
+    opacity: 0;
+    transition: all 1s;
+    top: 100%;
+    &.modal-active{
+        opacity: 1;
+        top: 140px;
+    }
+    .modal-close{
+        i{
+            font-family: monospace;
+            position: absolute;
+            width: 50px;
+            height: 50px;    
+            top: -15px;
+            right: -15px;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 45px;
+            font-size: 18px;
+            padding: 0;
+            text-transform: lowercase;
+        }
+    }
+}

@@ -1,0 +1,410 @@
+/*============================================================== 
+ Home
+ ============================================================== */
+#home{
+    text-align: center;
+    a{
+        margin: 5px 15px;
+        display: inline-block;
+        width: 70px;
+    }
+}
+.decoration{
+    text-align: center;
+    &.middle-decoration-x{
+        margin-top: -50px;
+    }
+}
+.ornament{
+    width: $ornament_w;
+    height: $ornament_h;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    &.ornament-top{
+        background: url(../assets/images/sprite-cerditos.svg#top-ornament) no-repeat;
+        background-position: center center;
+        background-size: contain;        
+    }
+    &.ornament-middle{
+        background: url(../assets/images/sprite-cerditos.svg#middle-ornament) no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+    &.ornament-bottom{
+        background: url(../assets/images/sprite-cerditos.svg#bottom-ornament) no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin-bottom: 50px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        background: black;
+        top: 0;
+        right: 0;
+        height: $ornament_h;
+        animation-name: toggle-width;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
+    }
+}
+.fade-out{
+    animation-name: fade-out;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;    
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    opacity: 0;
+}
+@keyframes toggle-width{
+    100% {
+        width: 0;        
+    }
+}
+@keyframes fade-in{
+    100% {
+        margin-top: 0;
+        margin-bottom: 20px;
+        opacity: 1;
+    }
+}
+@keyframes fade-out{
+    100% {
+        margin-top: 20px;
+        margin-bottom: -20px;
+        opacity: 0;
+    }
+}
+@keyframes image-in{
+    100%{
+        box-shadow: inset 0 0 30px 15px #000000;
+    }
+}
+
+/*============================================================== 
+ Story
+ ============================================================== */
+.story{
+    overflow: hidden;
+    li{
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+    p{
+        color: #ddd;
+        font-size: 25px;
+        margin-top: 40px;
+        line-height: 40px;
+        width: 650px;
+        display: inline-block;
+    }
+    .story-img{
+        height: 360px;
+        position: relative;        
+        text-align: right;        
+        float: right;
+        &:before{
+            content: '';
+            box-shadow: inset 0 0 30px 250px #000000;
+            width: 405px;
+            height: 100%;
+            display: block;
+            position: absolute;
+            background: transparent;
+            animation-name: image-in;
+            animation-fill-mode: forwards;
+            animation-duration: 2s;
+        }
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
+    .chapter-in{
+        p{
+            animation-name: image-in;
+            animation-fill-mode: forwards;
+            animation-duration: 2s;
+            animation-delay: .25s;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            opacity: 0;
+        }
+        .story-img{
+            &:before{
+                content: '';
+                box-shadow: inset 0 0 30px 250px #000000;
+            }
+        }
+    }
+    .chapter-out{
+        p{
+            animation-name: fade-in;
+            animation-fill-mode: forwards;
+            animation-duration: 2s;
+            animation-delay: .25s;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            opacity: 0;
+        }
+        .story-img{
+            &:before{
+                content: '';
+                box-shadow: inset 0 0 30px 250px #000000;
+            }
+        }
+    }
+}
+.story-nav{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    right: 0;
+    left: 0;
+    padding: 0 100px;
+    .story-steps{
+        display: inline-block
+    }
+    span{
+        color: #fff;
+        cursor: pointer;
+        font-family: monospace;
+        font-size: 26px;
+        display: inline-block;
+        vertical-align: super;
+        opacity: .7;
+        &:hover{
+            opacity: .9;
+        }
+    }
+    .story-position{
+        float: right;
+        i{
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            background: #f9f9f9;        
+            border-radius: 50%;
+            margin: 10px 5px;
+            cursor: pointer;
+            opacity: .4;
+            &.active{
+                opacity: 1;
+            }
+        }
+        span{
+            margin: 0 20px;
+        }
+    }
+    .story-music{
+        float: left;
+        span{
+            width: 32px;
+            height: 32px;
+            &.play{
+                background: url(../assets/images/audio-button.svg#play);
+            }
+            &.pause{
+                background: url(../assets/images/audio-button.svg#pause);
+            }
+            &.volume{
+                background: url(../assets/images/audio-button.svg#volume);
+            }
+            &.muted{
+                background: url(../assets/images/audio-button.svg#muted);
+            }
+            &.reload{
+                background: url(../assets/images/audio-button.svg#reload);
+            }
+        }
+    }
+}
+
+/*============================================================== 
+ Game
+ ============================================================== */
+#game{
+    text-align: center;
+    font-family: sans-serif;
+    .backHome{
+        opacity: 1;
+    }
+}
+.game{
+    width: 400px;
+    display: inline-block;
+    position: relative;
+    padding: 0 40px;
+    .turn{
+        text-align: center;
+        margin-bottom: 40px;
+        color: $primary;
+        img{
+            vertical-align: middle;
+            width: 40px;
+        }
+    }
+    .row{
+        width: 100%;
+        margin-bottom: -5px;
+        .box{
+            width: 33%;
+            position: relative;
+            border: 2px dashed #ddd;
+            margin-left: -6px;
+            display: inline-block;
+            &:after{
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+            &:first-child{
+                border-left: 0;
+            }
+            &:last-child{
+                border-right: 0;
+            }
+            img{
+                cursor: pointer;
+                position: absolute;
+                width: 80%;
+                top: 10%;
+                left: 10%;
+                height: 80%;
+            }
+        }
+        &:first-child{
+            .box{
+                border-top: 0;
+            }
+        }
+        &:last-child{
+            .box{
+                border-bottom: 0;
+            }
+        }
+    }
+    #tictac{
+        position: relative;
+        &.win-y{
+            &:after {
+                transform: rotate(90deg);
+                margin-top: 50%;
+                top: -5px;
+            }    
+        }
+        &.win-d1{
+            &:after {
+                transform: rotate(45deg);
+                margin-top: 50%;
+            }  
+        }
+        &.win-d2{
+            &:after {
+                transform: rotate(-45deg);
+                margin-top: 50%;
+            }  
+        }
+        &.no-win{
+            &:after {
+                margin-top: -62px;
+                left: calc(50% - 100px);
+                width: 0;
+            }
+        }
+        &:not(.no-win){
+            &:after {
+                width: 100%
+            }
+        }
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            top: 0;
+            left: -5px;
+            border: 5px solid #fff;
+            position: absolute;
+            border-radius: 5px;
+            background: #fff;
+            transition: all 1s;
+        }
+        @for $i from 0 through $gameSize - 1{
+            $widthSquare : (100/($gameSize*2)); 
+            &.win-x-#{$i}{
+                &:after {
+                    top: 1%*$widthSquare*($i * 2 + 1);
+                }
+            }
+            &.win-y-#{$i}{
+                &:after {
+                    left: 1%*$widthSquare*2*($i - 1);
+                }
+            }
+        }
+    }
+    &:after{
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        background: #111;
+        bottom: 0;
+        //box-shadow: 0px 0px 5px 2px #fff;
+    }
+    #game-win{
+        position: absolute;
+        left: 16.5%;
+        font-size: 22px;
+        a{
+            display: block;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 14px;
+            img{
+                width: 22px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+.game-options{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    box-sizing: border-box;
+    position: relative;
+    h3{
+        display: block;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    h4{
+        display: inline-block;
+        color: #fff;
+        font-size: 30px;
+        margin-left: 10px;
+        vertical-align: super;
+    }
+    img{
+        width: 50px;
+    }
+    a{
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+}
