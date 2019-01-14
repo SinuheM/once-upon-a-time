@@ -12,6 +12,7 @@ var handleError = function (e) {
 }
 
 function browserSyncInit(done){
+	parallel(pug, sass, js, assets, fonts)(done);
 	browserSync.init({
 		server: {
 			baseDir: 'dist'

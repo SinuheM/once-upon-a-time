@@ -98,20 +98,31 @@ var evaluteWin = (val, array) => {
     }
     if(res){
         tictac.classList.remove("no-win");
-        let win = document.getElementById('game-win');
+        document.getElementById('textwinner').innerText = "El ganador es: ";
         document.getElementById('imgwinner').setAttribute("src", game.data[turn].image);
         
         Array.from(document.getElementsByClassName('sqImg')).forEach(el => {
             el.classList.add("checked");
         });
-        document.getElementById('info').innerText = "Se acabo la partida. ";
-
-        setTimeout(() => { 
-            win.classList.add("modal-active");
-		}, 1500);
-        game.methods.setWinner(turn);
-        resetPoints();
+        gameEnd();
+    } else {
+        if(document.getElementsByClassName('checked').length == 9){
+            document.getElementById('textwinner').innerText = "Empate!! ";
+            document.getElementById('imgwinner').setAttribute("src", "assets/images/empate.png");
+            gameEnd();
+        }
     }
+}
+
+var gameEnd = () => {
+    let win = document.getElementById('game-win');
+    document.getElementById('info').innerText = "Se acabo la partida. ";
+
+    setTimeout(() => { 
+        win.classList.add("modal-active");
+    }, 1500);
+    game.methods.setWinner(turn);
+    resetPoints();
 }
 
 var clearTicTac = () => {
