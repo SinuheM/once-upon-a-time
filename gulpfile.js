@@ -1,5 +1,5 @@
 const { src, dest, watch, series, parallel } = require('gulp');
-const gulp_sass = require('gulp-sass'),
+const gulp_sass = require('gulp-sass')(require('sass')),
 	  gulp_pug  = require('gulp-pug'),
 	  useref = require('gulp-useref'),
 	  terser = require('gulp-terser'),
