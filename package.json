@@ -3,20 +3,19 @@
   "version": "1.0.0",
   "description": "Geoportal - ideasG",
   "main": "index.html",
-  "dependencies": {
-    "axios": "^0.18.1"
-  },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0",
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
     "gulp-if": "^2.0.2",
-    "gulp-pug": "^3.0.0",
-    "gulp-sass": "^3.2.0",
-    "gulp-terser": "^1.1.6",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-terser": "^1.4.1",
     "gulp-useref": "^3.1.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "gulp watch"
   },
   "author": "Adrian Priale Cordova",
   "license": "ISC"
