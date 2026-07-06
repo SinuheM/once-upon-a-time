@@ -1,3 +1,4 @@
+const fs = require('fs/promises');
 const { src, dest, watch, series, parallel } = require('gulp');
 const gulp_sass = require('gulp-sass')(require('sass')),
 	  gulp_pug  = require('gulp-pug'),
@@ -45,6 +46,13 @@ function assets(){
 	.pipe(dest('dist/assets'))
 };
 
+async function copyAssets() {
+  await fs.cp('app/assets', 'dist/assets', {
+    recursive: true,
+    force: true
+  });
+}
+
 function js(){
 	return src('app/js/**/*')
 	.pipe(dest('dist/js'));
@@ -77,12 +85,13 @@ async function watching(){
 
 function build(done){
 	console.log("Hello gulp");
-	series(pug, sass, js, jsDeploy, assets, fonts)(done);
+	series(pug, sass, js, jsDeploy, copyAssets, fonts)(done);
 	console.log("Bye gulp");
 };
 
 
 exports.watch = watching;
+exports.assets = copyAssets;
 exports.build = build;
 exports.brow = browserSyncInit;
 exports.jsDeploy = jsDeploy;

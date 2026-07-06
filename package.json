@@ -1,7 +1,7 @@
 {
-  "name": "geoportal",
+  "name": "once-upon-a-time",
   "version": "1.0.0",
-  "description": "Geoportal - ideasG",
+  "description": "Once upon a time...",
   "main": "index.html",
   "devDependencies": {
     "browser-sync": "^2.29.3",
